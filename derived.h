@@ -8,7 +8,7 @@ class Derived : public Base
     Q_OBJECT
 public:
     explicit Derived(Container *parent = 0);
-    virtual ~Derived();
+    ~Derived();
     void fnExplode();
 
 signals:
