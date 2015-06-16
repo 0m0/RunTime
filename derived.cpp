@@ -8,6 +8,11 @@ Derived::Derived(Container *parent) :
 {
 }
 
+Derived::~Derived()
+{
+    qDebug() << "Derived destroyed.";
+}
+
 void Derived::fnExplode()
 {
     QMessageBox::warning(0, "Warning", "Derived is exploding...");

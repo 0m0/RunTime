@@ -1,5 +1,5 @@
 #include <QApplication>
-
+#include <QDebug>
 #include "base.h"
 #include "derived.h"
 #include "bomb.h"
@@ -19,5 +19,11 @@ int main(int argc, char *argv[])
 
     b.doBombing();
 
+    //asynchronuce disposing
+    home.deleteLater();
+
+    if ((QObject *)&b1) qDebug() << "Wild Pointer!";
+
+    //return 0;
     return a.exec();
 }

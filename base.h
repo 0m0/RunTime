@@ -11,6 +11,7 @@ class Base : public QObject
 public:
     explicit Base(Container *parent = 0);
     virtual void fnExplode();
+    virtual ~Base();
 
 signals:
     void exploding();
